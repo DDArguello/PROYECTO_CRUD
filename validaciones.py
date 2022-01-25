@@ -13,7 +13,7 @@ class Validar:
             return False
 
     def buscarcargo(cod):
-        car = 0     
+        car=0  
         for pos in range(0,len(Cargo.cargos)):
             Carg = Cargo.cargos[pos]
             if Carg["cargo"] == cod:
@@ -22,7 +22,7 @@ class Validar:
         return car 
 
     def buscardepartamento(cod):
-        car = 0     
+        car=0  
         for pos in range(0,len(Departamento.departamentos)):
             depar = Departamento.departamentos[pos]
             if depar["departamento"] == cod:

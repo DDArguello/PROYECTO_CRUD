@@ -21,11 +21,13 @@ while opcion != "4":
       os.system("cls")
       if opc1 == "1":
         while True:
+          os.system("cls")
           nombre= input("Cargo: ")
           if len(nombre)>=1 and len(nombre)<=20:
             break
           else:
             print("La entrada de cargo es incorrecta! Vuelva a intentar...")
+            time.sleep(0.8)
         car = Cargo(nombre)
         carg = car.registro()
         Cargo.cargos.append(carg)
@@ -46,11 +48,13 @@ while opcion != "4":
       os.system("cls")
       if opc1 == "1":
         while True:
+          os.system("cls")
           nombre= input("Departamento: ")
           if len(nombre)>=5 and len(nombre)<=20:
             break
           else:
             print("La entrada de Departamento es incorrecta! Vuelva a intentar...")
+            time.sleep(0.8)
         dep = Departamento(nombre)
         depa = dep.registro()
         Departamento.departamentos.append(depa)
@@ -85,6 +89,9 @@ while opcion != "4":
           if cedul==True:
             if len(cedula)==10:
               break
+            else:
+              print("Cedula Invalidada, vuelva a intentar...")
+              time.sleep(0.8)
           else:  
             print("Solo debe ingresar digitos...")
             time.sleep(0.8)
@@ -94,20 +101,27 @@ while opcion != "4":
           ca=Validar.buscarcargo(cargo)
           if cargo==ca:
               break
+          else:
+              print("No existe, vuelva a intentar...")
+              time.sleep(0.8)
         while True: #Validacion de departamento
             os.system("cls")
             depar=input("Departamento: ")
             de=Validar.buscardepartamento(depar)
             if depar==de:
               break
+            else:
+              print("No existe, vuelva a intentar...")
+              time.sleep(0.8)
         os.system("cls")
         while True:
           os.system("cls")
           sueldo=input("Sueldo: ")
           su=Validar.validarSueldo(sueldo)
           if su==True:
-                sueldo=float(sueldo)
-                break
+                  sueldo=float(sueldo)
+                  if sueldo != 0:
+                    break
           else:
               print("Error... Vuelva a intentar")
               time.sleep(0.8)
