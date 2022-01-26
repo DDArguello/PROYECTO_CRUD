@@ -119,9 +119,9 @@ while opcion != "4":
           sueldo=input("Sueldo: ")
           su=Validar.validarSueldo(sueldo)
           if su==True:
-                  sueldo=float(sueldo)
-                  if sueldo != 0:
-                    break
+            sueldo=float(sueldo)
+            if sueldo != 0 and sueldo > 0:
+              break
           else:
               print("Error... Vuelva a intentar")
               time.sleep(0.8)

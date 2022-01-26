@@ -2,6 +2,7 @@ from departamento import Departamento
 from cargo import Cargo
 
 class Validar:
+
     def __init__(self):
         pass
 
@@ -14,7 +15,7 @@ class Validar:
 
     def buscarcargo(cod):
         car=0  
-        for pos in range(0,len(Cargo.cargos)):
+        for pos in range(0,len(Cargo.cargos)):             
             Carg = Cargo.cargos[pos]
             if Carg["cargo"] == cod:
                 car = Carg["cargo"]
