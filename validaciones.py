@@ -33,7 +33,11 @@ class Validar:
     
     def validarSueldo(suel):
         try:
-            suel=float(suel)
-            return True
-        except ValueError:
+            suel=int(suel)
             return False
+        except:
+            try:
+                suel=float(suel)
+                return True
+            except:
+                return False
