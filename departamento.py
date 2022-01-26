@@ -1,7 +1,7 @@
 class Departamento:
     secuencia=2
-    departamentos = [ {"codigo":1,"departamento":"SocioAmigo"},
-              {"codigo":2,"departamento":"VillaReal"},
+    departamentos = [ {"codigo":1,"departamento":"Sistemas"},
+              {"codigo":2,"departamento":"Logistica"},
              ]
     
     def __init__(self,descrip):

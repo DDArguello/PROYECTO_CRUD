@@ -2,7 +2,7 @@ from cargo import Cargo
 from departamento import Departamento
 class Empleado:
     secuencia=1
-    empleados= [{"codigo":1,"nombre":"Dan","cedula":"0914192182","cargo":"Analista","departamento":"SocioAmigo","sueldo":500.50},]
+    empleados= [{"codigo":1,"nombre":"Dan","cedula":"0914192182","cargo":"Analista","departamento":"Sistemas","sueldo":500.50},]
     
     def __init__(self,nombre,cedula,codCargo,codDepartamento,sueldo):
         Empleado.secuencia+=1
